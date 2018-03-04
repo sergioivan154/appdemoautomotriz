@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AppLealtad</string>
+    <string-array name="Holograma">
+        <item>Holograma</item>
+        <item>Amarillo</item>
+        <item>Rosa</item>
+        <item>Rojo</item>
+        <item>Verde</item>
+        <item>Azul</item>
+    </string-array>
+</resources>
