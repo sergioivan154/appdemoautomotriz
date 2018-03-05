@@ -18,6 +18,7 @@ import com.example.sergio.applealtad.R;
 import com.example.sergio.applealtad.home.secciones.HomeFragment;
 import com.example.sergio.applealtad.home.secciones.PromocionesFragment;
 import com.example.sergio.applealtad.home.secciones.RefaccionesFragment;
+import com.example.sergio.applealtad.home.secciones.ServicioFragment;
 import com.example.sergio.applealtad.register.RegisterFragment;
 
 public class HomeActivity extends AppCompatActivity
@@ -101,7 +102,11 @@ public class HomeActivity extends AppCompatActivity
             ft.replace(R.id.content_home, RefaccionesFragment.getInstance());
             ft.commit();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_service) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+
+            ft.replace(R.id.content_home, ServicioFragment.getInstance());
+            ft.commit();
 
         } else if (id == R.id.nav_manage) {
 

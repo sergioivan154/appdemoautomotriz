@@ -42,7 +42,7 @@
         android:layout_height="match_parent"
         android:layout_weight="2"
         android:orientation="horizontal"
-        android:padding="20dp">
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,6 +52,15 @@
             android:background="@drawable/card_background"
             android:gravity="center"
             android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="smiley_stack.json"
+                app:lottie_loop="true" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -86,7 +95,8 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Próximo servicio de kilometraje" />
+                android:text="Próximo servicio de kilometraje"
+                android:textAlignment="center" />
         </LinearLayout>
 
     </LinearLayout>
@@ -96,7 +106,7 @@
         android:layout_height="match_parent"
         android:layout_weight="2"
         android:orientation="horizontal"
-        android:padding="20dp">
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -134,6 +144,7 @@
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Tips" />
         </LinearLayout>
     </LinearLayout>

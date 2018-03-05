@@ -17,7 +17,7 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Refacciones y Accesorios" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_service"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Servicio" />
         <item
