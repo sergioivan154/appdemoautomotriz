@@ -16,6 +16,8 @@ import android.view.MenuItem;
 
 import com.example.sergio.applealtad.R;
 import com.example.sergio.applealtad.home.secciones.HomeFragment;
+import com.example.sergio.applealtad.home.secciones.PromocionesFragment;
+import com.example.sergio.applealtad.home.secciones.RefaccionesFragment;
 import com.example.sergio.applealtad.register.RegisterFragment;
 
 public class HomeActivity extends AppCompatActivity
@@ -81,9 +83,23 @@ public class HomeActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_promos) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+
+            ft.replace(R.id.content_home, PromocionesFragment.getInstance());
+            ft.commit();
+        }
+        else if (id == R.id.nav_home) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+
+            ft.replace(R.id.content_home, HomeFragment.getInstance());
+            ft.commit();
+        }
+        else if (id == R.id.nav_refac) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+
+            ft.replace(R.id.content_home, RefaccionesFragment.getInstance());
+            ft.commit();
 
         } else if (id == R.id.nav_slideshow) {
 

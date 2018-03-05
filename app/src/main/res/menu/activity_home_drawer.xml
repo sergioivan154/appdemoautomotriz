@@ -9,11 +9,11 @@
             android:icon="?android:attr/fingerprintAuthDrawable"
             android:title="Home" />
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_promos"
             android:icon="@drawable/ic_menu_camera"
             android:title="Promociones" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_refac"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Refacciones y Accesorios" />
         <item
