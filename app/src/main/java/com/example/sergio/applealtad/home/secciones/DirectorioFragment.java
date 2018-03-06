@@ -23,8 +23,11 @@ import android.view.ViewGroup;
 
 import com.example.sergio.applealtad.R;
 import com.example.sergio.applealtad.bases.BaseFragment;
+import com.example.sergio.applealtad.home.secciones.adapters.AdapterDirectorio;
 import com.example.sergio.applealtad.home.secciones.adapters.AdapterSeminuevo;
-import com.google.android.gms.location.LocationListener;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -93,13 +96,13 @@ public class DirectorioFragment extends BaseFragment  implements OnMapReadyCallb
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        /*
-        AdapterSeminuevo adapterSeminuevo = new AdapterSeminuevo(getContext(),5);
 
-        RecyclerView rwManual = (RecyclerView)findViewById(R.id.rwSeminuevos);
-        rwManual.setLayoutManager(new LinearLayoutManager(getActivity()));
-        rwManual.setAdapter(adapterSeminuevo);
-        adapterSeminuevo.notifyDataSetChanged();*/
+        AdapterDirectorio adapterDirectorio = new AdapterDirectorio(getContext(),5);
+
+        RecyclerView rwDirectorio = (RecyclerView)findViewById(R.id.rvDirectorio);
+        rwDirectorio.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rwDirectorio.setAdapter(adapterDirectorio);
+        adapterDirectorio.notifyDataSetChanged();
 
 
     }
@@ -118,6 +121,21 @@ public class DirectorioFragment extends BaseFragment  implements OnMapReadyCallb
         catch (Exception ex){
             Log.i("Excepcion controlada", ex.getMessage());
         }
+    }
+
+    @Override
+    public void onStatusChanged(String s, int i, Bundle bundle) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String s) {
+
+    }
+
+    @Override
+    public void onProviderDisabled(String s) {
+
     }
 
     @Override
