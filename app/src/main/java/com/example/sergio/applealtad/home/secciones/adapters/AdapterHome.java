@@ -16,9 +16,10 @@ import com.example.sergio.applealtad.R;
 public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private  int num;
-    public AdapterHome(Context context,int num){
+    public AdapterHome(Context context,int num,clickListener listener){
         this.context=context;
         this.num = num;
+        this.clickListener = listener;
 
     }
     @Override
@@ -38,13 +39,16 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         private ViewHolderItemMenu(View itemView){
             super(itemView);
 
-
+            itemView.setOnClickListener(this);
 
 
         }
 
         @Override
         public void onClick(View view) {
+            if(clickListener != null){
+                clickListener.onClickListener(getAdapterPosition());
+            }
 
         }
     }
@@ -74,5 +78,12 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
         return position;
+    }
+    public clickListener clickListener;
+    public interface clickListener{
+        void onClickListener(int position);
+
+
+
     }
 }

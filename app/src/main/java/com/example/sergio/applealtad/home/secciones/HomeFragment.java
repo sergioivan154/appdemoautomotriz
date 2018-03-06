@@ -39,7 +39,12 @@ public class HomeFragment extends BaseFragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        AdapterHome adapterHome = new AdapterHome(getContext(),5);
+        AdapterHome adapterHome = new AdapterHome(getContext(), 5, new AdapterHome.clickListener() {
+            @Override
+            public void onClickListener(int position) {
+                addFragmentToBackStack(PromocionesFragment.getInstance(),"promociones",R.id.content_home);
+            }
+        });
 
         RecyclerView rwHome = (RecyclerView)findViewById(R.id.rwHome);
         rwHome.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
