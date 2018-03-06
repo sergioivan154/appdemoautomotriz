@@ -16,6 +16,7 @@ import android.view.MenuItem;
 
 import com.example.sergio.applealtad.R;
 import com.example.sergio.applealtad.home.secciones.HomeFragment;
+import com.example.sergio.applealtad.home.secciones.ManualEmergenciaFragment;
 import com.example.sergio.applealtad.home.secciones.PromocionesFragment;
 import com.example.sergio.applealtad.home.secciones.RefaccionesFragment;
 import com.example.sergio.applealtad.home.secciones.ServicioFragment;
@@ -108,7 +109,11 @@ public class HomeActivity extends AppCompatActivity
             ft.replace(R.id.content_home, ServicioFragment.getInstance());
             ft.commit();
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_manual) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+
+            ft.replace(R.id.content_home, ManualEmergenciaFragment.getInstance());
+            ft.commit();
 
         } else if (id == R.id.nav_share) {
 

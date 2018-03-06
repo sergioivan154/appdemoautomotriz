@@ -11,13 +11,13 @@
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Promociones"
+        android:text="Manual de Emergencia"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rwPromos"
+        android:id="@+id/rwManual"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp" />

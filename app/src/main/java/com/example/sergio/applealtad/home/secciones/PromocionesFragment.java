@@ -40,7 +40,7 @@ public class PromocionesFragment extends BaseFragment {
 
         AdapterPromociones adapterPromociones = new AdapterPromociones(getContext(),5);
 
-        RecyclerView rwPromos = (RecyclerView)findViewById(R.id.rwPromos);
+        RecyclerView rwPromos = (RecyclerView)findViewById(R.id.rwManual);
         rwPromos.setLayoutManager(new LinearLayoutManager(getActivity()));
         rwPromos.setAdapter(adapterPromociones);
         adapterPromociones.notifyDataSetChanged();
