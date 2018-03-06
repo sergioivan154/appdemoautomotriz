@@ -68,13 +68,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
               <folding>
-                <marker date="1520315336317" expanded="true" signature="1008:1018" ph="..." />
+                <marker date="1520315465679" expanded="true" signature="487:711" ph="..." />
+                <marker date="1520315465679" expanded="true" signature="515:691" ph="..." />
+                <marker date="1520315465679" expanded="true" signature="772:829" ph="..." />
+                <marker date="1520315465679" expanded="true" signature="849:1018" ph="..." />
+                <marker date="1520315465679" expanded="false" signature="922:951" ph="&quot;HomeActivity&quot;" />
+                <marker date="1520315465679" expanded="true" signature="1008:1018" ph="..." />
               </folding>
             </state>
           </provider>
@@ -83,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+            <state relative-caret-position="296">
+              <caret line="23" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -1917,9 +1922,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/row_seminuevos.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_directorio.xml" />
-        <option value="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -2101,7 +2106,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520315366637" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520315606580" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2148,7 +2153,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520315366637" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520315606580" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2180,27 +2185,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2330,7 +2314,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520315366638" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520315606587" />
       </method>
     </configuration>
     <list size="1">
@@ -2382,7 +2366,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1767442" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1767442" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -2603,7 +2587,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1380">
           <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2611,7 +2594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="26" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2622,7 +2604,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2647,7 +2628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
           <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="23" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2658,7 +2638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2669,7 +2648,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="98" column="15" lean-forward="false" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2677,9 +2655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="976">
           <caret line="63" column="63" lean-forward="false" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2687,7 +2662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="24" column="2" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="25" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2698,7 +2672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="266" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="276" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2709,7 +2682,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="212" column="46" lean-forward="false" selection-start-line="212" selection-start-column="46" selection-end-line="212" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2720,7 +2692,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2744,26 +2715,14 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_manual_emergencia.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_manual_emergencia.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sergio/applealtad/home/secciones/HomeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2771,7 +2730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="39" column="54" lean-forward="false" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2787,7 +2745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2795,11 +2752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1798#1799#0" expanded="false" />
-            <element signature="e#1824#1825#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2818,7 +2770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="91" column="12" lean-forward="false" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2829,7 +2780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2894,7 +2844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="34" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="16" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2905,7 +2854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="875">
           <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2916,7 +2864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
           <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2927,7 +2874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2974,19 +2920,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="60">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding>
+            <marker date="1520315520775" expanded="true" signature="721:897" ph="..." />
+            <marker date="1520315520775" expanded="true" signature="936:1077" ph="..." />
+            <marker date="1520315520775" expanded="true" signature="1096:1285" ph="..." />
+            <marker date="1520315520775" expanded="true" signature="1306:1394" ph="..." />
+            <marker date="1520315520775" expanded="true" signature="1414:1518" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2998,8 +2942,21 @@
         <state relative-caret-position="165">
           <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           <folding>
-            <marker date="1520315336317" expanded="true" signature="1008:1018" ph="..." />
+            <marker date="1520315465679" expanded="true" signature="487:711" ph="..." />
+            <marker date="1520315465679" expanded="true" signature="515:691" ph="..." />
+            <marker date="1520315465679" expanded="true" signature="772:829" ph="..." />
+            <marker date="1520315465679" expanded="true" signature="849:1018" ph="..." />
+            <marker date="1520315465679" expanded="false" signature="922:951" ph="&quot;HomeActivity&quot;" />
+            <marker date="1520315465679" expanded="true" signature="1008:1018" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="23" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
