@@ -47,16 +47,22 @@ public class HomeActivity extends AppCompatActivity
         ft.replace(R.id.content_home, HomeFragment.getInstance());
         ft.commit();
     }
-
     @Override
     public void onBackPressed() {
+
+        int index = getSupportFragmentManager().getBackStackEntryCount();
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        } else if(index>0) {
             super.onBackPressed();
         }
+
+
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
