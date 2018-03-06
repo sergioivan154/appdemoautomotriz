@@ -25,11 +25,11 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="Manual de emergencia" />
         <item
-            android:id="@+id/nav_share"
+            android:id="@+id/nav_seminuevo"
             android:icon="@drawable/ic_menu_share"
             android:title="Seminuevos" />
         <item
-            android:id="@+id/nav_send"
+            android:id="@+id/nav_directorio"
             android:icon="@drawable/ic_menu_send"
             android:title="Directorio" />
     </group>

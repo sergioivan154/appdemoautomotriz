@@ -19,6 +19,7 @@ import com.example.sergio.applealtad.home.secciones.HomeFragment;
 import com.example.sergio.applealtad.home.secciones.ManualEmergenciaFragment;
 import com.example.sergio.applealtad.home.secciones.PromocionesFragment;
 import com.example.sergio.applealtad.home.secciones.RefaccionesFragment;
+import com.example.sergio.applealtad.home.secciones.SeminuevoFragment;
 import com.example.sergio.applealtad.home.secciones.ServicioFragment;
 import com.example.sergio.applealtad.register.RegisterFragment;
 
@@ -115,10 +116,16 @@ public class HomeActivity extends AppCompatActivity
             ft.replace(R.id.content_home, ManualEmergenciaFragment.getInstance());
             ft.commit();
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_seminuevo) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_home, SeminuevoFragment.getInstance());
+            ft.commit();
 
-        } else if (id == R.id.nav_send) {
 
+        } else if (id == R.id.nav_directorio) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_home, SeminuevoFragment.getInstance());
+            ft.commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
