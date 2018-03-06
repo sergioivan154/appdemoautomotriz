@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.google.android.gms:play-services-wallet-9.6.1">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wallet-9.6.1.aar/e04e9cd32ba50b38107227570b34393d/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wallet-9.6.1.aar/e04e9cd32ba50b38107227570b34393d/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wallet-9.6.1.aar/39364624e61b49cb1641114298929110/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wallet-9.6.1.aar/39364624e61b49cb1641114298929110/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
