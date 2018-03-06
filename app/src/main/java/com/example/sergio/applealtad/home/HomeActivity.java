@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.sergio.applealtad.R;
+import com.example.sergio.applealtad.home.secciones.DirectorioFragment;
 import com.example.sergio.applealtad.home.secciones.HomeFragment;
 import com.example.sergio.applealtad.home.secciones.ManualEmergenciaFragment;
 import com.example.sergio.applealtad.home.secciones.PromocionesFragment;
@@ -124,7 +125,7 @@ public class HomeActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_directorio) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.content_home, SeminuevoFragment.getInstance());
+            ft.replace(R.id.content_home, DirectorioFragment.getInstance());
             ft.commit();
         }
 
