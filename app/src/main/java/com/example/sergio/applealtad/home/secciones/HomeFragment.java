@@ -16,6 +16,9 @@ import com.example.sergio.applealtad.home.secciones.adapters.AdapterHome;
 import com.example.sergio.applealtad.home.secciones.adapters.AdapterPromociones;
 import com.example.sergio.applealtad.register.RegisterFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -38,8 +41,16 @@ public class HomeFragment extends BaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        List<Integer> lImgPromociones = new ArrayList<>();
 
-        AdapterHome adapterHome = new AdapterHome(getContext(), 5, new AdapterHome.clickListener() {
+        lImgPromociones.add(R.drawable.promocion1);
+        lImgPromociones.add(R.drawable.promocion2);
+        lImgPromociones.add(R.drawable.promocion3);
+        lImgPromociones.add(R.drawable.promocion4);
+        lImgPromociones.add(R.drawable.promocion5);
+        lImgPromociones.add(R.drawable.promocion6);
+
+        AdapterHome adapterHome = new AdapterHome(getContext(), lImgPromociones, new AdapterHome.clickListener() {
             @Override
             public void onClickListener(int position) {
                 addFragmentToBackStack(PromocionesFragment.getInstance(),"promociones",R.id.content_home);

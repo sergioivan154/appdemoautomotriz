@@ -16,6 +16,9 @@ import com.example.sergio.applealtad.bases.BaseFragment;
 import com.example.sergio.applealtad.home.secciones.adapters.AdapterPromociones;
 import com.example.sergio.applealtad.register.VehiculoFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -38,7 +41,16 @@ public class PromocionesFragment extends BaseFragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        AdapterPromociones adapterPromociones = new AdapterPromociones(getContext(),5);
+        List<Integer> imgPromociones = new ArrayList<>();
+
+        imgPromociones.add(R.drawable.promocion1);
+        imgPromociones.add(R.drawable.promocion2);
+        imgPromociones.add(R.drawable.promocion3);
+        imgPromociones.add(R.drawable.promocion4);
+        imgPromociones.add(R.drawable.promocion5);
+        imgPromociones.add(R.drawable.promocion6);
+
+        AdapterPromociones adapterPromociones = new AdapterPromociones(getContext(),imgPromociones);
 
         RecyclerView rwPromos = (RecyclerView)findViewById(R.id.rwManual);
         rwPromos.setLayoutManager(new LinearLayoutManager(getActivity()));

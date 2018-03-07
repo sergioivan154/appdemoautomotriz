@@ -5,9 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sergio.applealtad.R;
+
+import java.util.List;
 
 /**
  * Created by mac on 06/03/18.
@@ -15,10 +18,11 @@ import com.example.sergio.applealtad.R;
 
 public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
-    private  int num;
-    public AdapterHome(Context context,int num,clickListener listener){
+    private List<Integer> lImagenesPromociones;
+
+    public AdapterHome(Context context,List<Integer> lImagenesPromociones,clickListener listener){
         this.context=context;
-        this.num = num;
+        this.lImagenesPromociones = lImagenesPromociones;
         this.clickListener = listener;
 
     }
@@ -34,11 +38,12 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private class ViewHolderItemMenu extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView txtAportacion, txtPatron, txtFecha,txtSueldo;
-
+        public ImageView imagenPromo;
 
         private ViewHolderItemMenu(View itemView){
             super(itemView);
 
+            imagenPromo = itemView.findViewById(R.id.imagenPromo);
             itemView.setOnClickListener(this);
 
 
@@ -66,12 +71,12 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
     private void configureViewHolderItemMenu(final AdapterHome.ViewHolderItemMenu holder, final int position) {
 
-
+        holder.imagenPromo.setImageResource(lImagenesPromociones.get(position));
 
     }
     @Override
     public int getItemCount() {
-        return num;
+        return lImagenesPromociones.size();
     }
     @Override
     public  int getItemViewType(int position) {

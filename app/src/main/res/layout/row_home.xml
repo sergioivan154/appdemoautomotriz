@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/volks" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imagenPromo"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:scaleType="fitCenter"

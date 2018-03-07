@@ -5,11 +5,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sergio.applealtad.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by LENOVO on 05/03/2018.
@@ -17,10 +19,10 @@ import java.util.ArrayList;
 
 public class AdapterPromociones extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
-    private  int num;
-    public AdapterPromociones(Context context,int num){
+    private List<Integer> lImagenesPromociones;
+    public AdapterPromociones(Context context,List<Integer> lImagenesPromociones){
         this.context=context;
-        this.num = num;
+        this.lImagenesPromociones = lImagenesPromociones;
 
     }
     @Override
@@ -35,13 +37,14 @@ public class AdapterPromociones extends RecyclerView.Adapter<RecyclerView.ViewHo
     private class ViewHolderItemMenu extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView txtAportacion, txtPatron, txtFecha,txtSueldo;
+        public ImageView imagenPrincipal;
+        public ImageView imagenSecundaria;
 
 
         private ViewHolderItemMenu(View itemView){
             super(itemView);
-
-
-
+            imagenPrincipal = itemView.findViewById(R.id.imagePrincipal);
+            imagenSecundaria = itemView.findViewById(R.id.imageSecundaria);
 
         }
 
@@ -65,11 +68,16 @@ public class AdapterPromociones extends RecyclerView.Adapter<RecyclerView.ViewHo
     private void configureViewHolderItemMenu(final ViewHolderItemMenu holder, final int position) {
 
 
+       // if(position%2 != 0) {
+            holder.imagenPrincipal.setImageResource(lImagenesPromociones.get(position));
+            if(position + 1 < lImagenesPromociones.size())
+                holder.imagenSecundaria.setImageResource(lImagenesPromociones.get(position + 1));
+       // }
 
     }
     @Override
     public int getItemCount() {
-        return num;
+        return lImagenesPromociones.size();
     }
     @Override
     public  int getItemViewType(int position) {
