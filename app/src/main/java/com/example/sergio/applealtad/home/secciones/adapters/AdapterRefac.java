@@ -5,9 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sergio.applealtad.R;
+
+import java.util.List;
 
 /**
  * Created by LENOVO on 05/03/2018.
@@ -16,10 +19,10 @@ import com.example.sergio.applealtad.R;
 public class AdapterRefac extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
 
     private Context context;
-    private  int num;
-    public AdapterRefac(Context context,int num){
+    private List<Integer> lImagenesRefacciones;
+    public AdapterRefac(Context context,List<Integer> lImagenesRefacciones){
         this.context=context;
-        this.num = num;
+        this.lImagenesRefacciones =lImagenesRefacciones;
 
     }
     @Override
@@ -45,13 +48,14 @@ public class AdapterRefac extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     private class ViewHolderItemMenu extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView txtAportacion, txtPatron, txtFecha,txtSueldo;
+        ImageView imgPrincipal, imgSecundaria;
 
 
         private ViewHolderItemMenu(View itemView){
             super(itemView);
 
-
+            imgPrincipal = itemView.findViewById(R.id.imagenPrincipal);
+            imgSecundaria = itemView.findViewById(R.id.imagenSecundaria);
 
 
         }
@@ -63,11 +67,13 @@ public class AdapterRefac extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
     private void configureViewHolderItemMenu(final AdapterRefac.ViewHolderItemMenu holder, final int position) {
 
-
+        holder.imgPrincipal.setImageResource(lImagenesRefacciones.get(position));
+        if(position + 1 < lImagenesRefacciones.size())
+            holder.imgSecundaria.setImageResource(lImagenesRefacciones.get(position + 1));
     }
     @Override
     public int getItemCount() {
-        return num;
+        return lImagenesRefacciones.size();
     }
     @Override
     public  int getItemViewType(int position) {

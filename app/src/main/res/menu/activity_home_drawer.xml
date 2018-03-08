@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="?android:attr/fingerprintAuthDrawable"
+            android:icon="@drawable/volks"
             android:title="Home" />
         <item
             android:id="@+id/nav_promos"
@@ -20,6 +20,10 @@
             android:id="@+id/nav_service"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Servicio" />
+        <item
+            android:id="@+id/nav_tips"
+            android:icon="@android:drawable/ic_menu_help"
+            android:title="Tips" />
         <item
             android:id="@+id/nav_manual"
             android:icon="@drawable/ic_menu_manage"

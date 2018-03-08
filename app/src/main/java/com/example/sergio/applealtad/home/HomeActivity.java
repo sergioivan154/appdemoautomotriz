@@ -30,6 +30,7 @@ import com.example.sergio.applealtad.home.secciones.PromocionesFragment;
 import com.example.sergio.applealtad.home.secciones.RefaccionesFragment;
 import com.example.sergio.applealtad.home.secciones.SeminuevoFragment;
 import com.example.sergio.applealtad.home.secciones.ServicioFragment;
+import com.example.sergio.applealtad.home.secciones.TipsFragment;
 import com.example.sergio.applealtad.register.RegisterFragment;
 import com.google.android.gms.maps.model.LatLng;
 
@@ -162,6 +163,10 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_directorio) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_home, DirectorioFragment.getInstance());
+            ft.commit();
+        }else  if(id == R.id.nav_tips){
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_home, TipsFragment.getInstance());
             ft.commit();
         }
 

@@ -15,6 +15,9 @@ import com.example.sergio.applealtad.bases.BaseFragment;
 import com.example.sergio.applealtad.home.secciones.adapters.AdapterPromociones;
 import com.example.sergio.applealtad.home.secciones.adapters.AdapterRefac;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -38,8 +41,18 @@ public class RefaccionesFragment extends BaseFragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        AdapterRefac adapterRefac = new AdapterRefac(getContext(),3);
 
+        List<Integer> imgRefacciones = new ArrayList<>();
+
+        imgRefacciones.add(R.drawable.refacciones01);
+        imgRefacciones.add(R.drawable.refacciones02);
+        imgRefacciones.add(R.drawable.refacciones03);
+        imgRefacciones.add(R.drawable.refacciones04);
+        imgRefacciones.add(R.drawable.refacciones05);
+        imgRefacciones.add(R.drawable.refacciones06);
+
+
+        AdapterRefac adapterRefac = new AdapterRefac(getContext(),imgRefacciones);
         RecyclerView rwRefac = (RecyclerView)findViewById(R.id.rwRefact);
         rwRefac.setLayoutManager(new LinearLayoutManager(getActivity()));
         rwRefac.setAdapter(adapterRefac);

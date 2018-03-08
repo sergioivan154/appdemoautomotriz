@@ -36,7 +36,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             app:lottie_autoPlay="true"
-            app:lottie_fileName="muzli.json"
+            app:lottie_fileName="ripple.json"
             app:lottie_loop="true" />
 
         <TextView
