@@ -7,7 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.sergio.applealtad.Entities.DirectorioPojo;
 import com.example.sergio.applealtad.R;
+
+import java.util.List;
 
 /**
  * Created by sergio on 05/03/18.
@@ -16,7 +19,9 @@ import com.example.sergio.applealtad.R;
 public class AdapterDirectorio extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private  int num;
-    public AdapterDirectorio(Context context, int num){
+    List<DirectorioPojo> lDirectorio;
+    public AdapterDirectorio(Context context, List<DirectorioPojo> lDirectorio){
+        this.lDirectorio = lDirectorio;
         this.context=context;
         this.num = num;
 
@@ -26,17 +31,20 @@ public class AdapterDirectorio extends RecyclerView.Adapter<RecyclerView.ViewHol
         RecyclerView.ViewHolder viewHolder = null;
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View headerView=inflater.inflate(R.layout.row_directorio,parent,false);
-        viewHolder= new AdapterDirectorio.ViewHolderItemMenu(headerView);
+        viewHolder = new AdapterDirectorio.ViewHolderItemMenu(headerView);
         return viewHolder;
     }
 
     private class ViewHolderItemMenu extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView txtAportacion, txtPatron, txtFecha,txtSueldo;
+        TextView txtNombre, txtTelefono;
 
 
         private ViewHolderItemMenu(View itemView){
             super(itemView);
+
+            txtNombre = itemView.findViewById(R.id.txtNombre);
+            txtTelefono = itemView.findViewById(R.id.txtTelefono);
 
 
 
@@ -62,12 +70,13 @@ public class AdapterDirectorio extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
     private void configureViewHolderItemMenu(final AdapterDirectorio.ViewHolderItemMenu holder, final int position) {
 
-
+        holder.txtNombre.setText(lDirectorio.get(position).getNombre());
+        holder.txtTelefono.setText(lDirectorio.get(position).getTelefono());
 
     }
     @Override
     public int getItemCount() {
-        return num;
+        return lDirectorio.size();
     }
     @Override
     public  int getItemViewType(int position) {

@@ -21,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.sergio.applealtad.Entities.DirectorioPojo;
 import com.example.sergio.applealtad.R;
 import com.example.sergio.applealtad.bases.BaseFragment;
 import com.example.sergio.applealtad.home.secciones.adapters.AdapterDirectorio;
@@ -37,6 +38,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -96,8 +100,18 @@ public class DirectorioFragment extends BaseFragment  implements OnMapReadyCallb
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        List<DirectorioPojo> lDirectorio = new ArrayList<>();
+        lDirectorio.add(new DirectorioPojo("Autos Nuevos", "5555-5555"));
+        lDirectorio.add(new DirectorioPojo("Autos Seminuevos", "5555-5555"));
+        lDirectorio.add(new DirectorioPojo("Servicio", "5555-5555"));
+        lDirectorio.add(new DirectorioPojo("Refacciones y Accesorios", "5555-5555"));
+        lDirectorio.add(new DirectorioPojo("Hojalatería Pintura", "5555-5555"));
+        lDirectorio.add(new DirectorioPojo("Aseguradora", "5555-5555"));
+        lDirectorio.add(new DirectorioPojo("Financiera", "5555-5555"));
+        lDirectorio.add(new DirectorioPojo("Policia", "5555-5555"));
+        lDirectorio.add(new DirectorioPojo("Bomberos", "5555-5555"));
 
-        AdapterDirectorio adapterDirectorio = new AdapterDirectorio(getContext(),5);
+        AdapterDirectorio adapterDirectorio = new AdapterDirectorio(getContext(),lDirectorio);
 
         RecyclerView rwDirectorio = (RecyclerView)findViewById(R.id.rvDirectorio);
         rwDirectorio.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -110,12 +124,12 @@ public class DirectorioFragment extends BaseFragment  implements OnMapReadyCallb
     @Override
     public void onLocationChanged(Location location) {
         try {
-            latLng = new LatLng(location.getLatitude(), location.getLongitude());
+          /*  latLng = new LatLng(location.getLatitude(), location.getLongitude());
             CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 15);
             mapa.animateCamera(cameraUpdate);
             if (ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 return;
-            }
+            }*/
             //locationManager.removeUpdates(DirectorioFragment.this);
         }
         catch (Exception ex){
@@ -181,15 +195,15 @@ public class DirectorioFragment extends BaseFragment  implements OnMapReadyCallb
             map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
             Location  location = null;
-            double lat = 19.426874;
-            double lng =  -99.167937;
-            if (locationManager != null) {
+            double lat = 18.948560;
+            double lng =  -99.244370;
+            /*if (locationManager != null) {
                 location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
                 if (location != null) {
                     lat = location.getLatitude();
                     lng = location.getLongitude();
                 }
-            }
+            }*/
             latLng = new LatLng(lat, lng);
 
             BitmapFactory.Options opt = new BitmapFactory.Options();
@@ -198,8 +212,8 @@ public class DirectorioFragment extends BaseFragment  implements OnMapReadyCallb
           /*  Bitmap imageBitmap= BitmapFactory.decodeResource(getResources(),
                     R.drawable.cliente,opt);*/
 
-           // map.addMarker(new MarkerOptions().position(latLng)).setIcon(BitmapDescriptorFactory.fromBitmap(imageBitmap));
-            CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 10);
+            map.addMarker(new MarkerOptions().position(latLng));//.setIcon(BitmapDescriptorFactory.fromBitmap(imageBitmap));
+            CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 15);
             mapa.animateCamera(cameraUpdate);
 
         }
