@@ -1,14 +1,17 @@
 package com.example.sergio.applealtad.home.secciones;
 
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.sergio.applealtad.R;
 import com.example.sergio.applealtad.bases.BaseFragment;
@@ -62,6 +65,29 @@ public class HomeFragment extends BaseFragment {
         rwHome.setAdapter(adapterHome);
 
         adapterHome.notifyDataSetChanged();
+
+        AnimationDrawable animation = new AnimationDrawable();
+        animation.addFrame(getResources().getDrawable(R.drawable.tips02), 3000);
+        animation.addFrame(getResources().getDrawable(R.drawable.tips03), 3000);
+        animation.addFrame(getResources().getDrawable(R.drawable.tips04), 3000);
+        animation.addFrame(getResources().getDrawable(R.drawable.tips01), 3000);
+        animation.setEnterFadeDuration(500);
+        animation.setExitFadeDuration(500);
+
+        animation.setOneShot(false);
+
+        ImageView imageAnim =  (ImageView) findViewById(R.id.imgTips);
+        imageAnim.setBackgroundDrawable(animation);
+
+
+        // start the animation!
+        animation.start();
+        imageAnim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              addFragmentToBackStack(TipsFragment.getInstance(),"tips",R.id.content_home);
+            }
+        });
 
 
     }
