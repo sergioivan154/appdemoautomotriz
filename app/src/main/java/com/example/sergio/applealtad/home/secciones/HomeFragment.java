@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
 import com.example.sergio.applealtad.R;
@@ -47,11 +48,9 @@ public class HomeFragment extends BaseFragment {
         List<Integer> lImgPromociones = new ArrayList<>();
 
         lImgPromociones.add(R.drawable.promocion1);
-        lImgPromociones.add(R.drawable.promocion2);
-        lImgPromociones.add(R.drawable.promocion3);
-        lImgPromociones.add(R.drawable.promocion4);
-        lImgPromociones.add(R.drawable.promocion5);
-        lImgPromociones.add(R.drawable.promocion6);
+
+
+
 
         AdapterHome adapterHome = new AdapterHome(getContext(), lImgPromociones, new AdapterHome.clickListener() {
             @Override
@@ -67,10 +66,10 @@ public class HomeFragment extends BaseFragment {
         adapterHome.notifyDataSetChanged();
 
         AnimationDrawable animation = new AnimationDrawable();
-        animation.addFrame(getResources().getDrawable(R.drawable.tips02), 3000);
-        animation.addFrame(getResources().getDrawable(R.drawable.tips03), 3000);
-        animation.addFrame(getResources().getDrawable(R.drawable.tips04), 3000);
-        animation.addFrame(getResources().getDrawable(R.drawable.tips01), 3000);
+        animation.addFrame(getResources().getDrawable(R.drawable.tips02), 4000);
+        animation.addFrame(getResources().getDrawable(R.drawable.tips03), 4000);
+        animation.addFrame(getResources().getDrawable(R.drawable.tips04), 4000);
+        animation.addFrame(getResources().getDrawable(R.drawable.tips01), 4000);
         animation.setEnterFadeDuration(500);
         animation.setExitFadeDuration(500);
 

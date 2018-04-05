@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:text="Volksvagen"
+            android:text="Volkswagen"
             android:textAlignment="center"
             android:textColor="@color/blanco"
             android:textSize="18sp" />
@@ -73,6 +73,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
 
+            android:layout_margin="10dp"
+            android:layout_marginRight="5dp"
             android:adjustViewBounds="true"
             android:padding="5dp"
             android:scaleType="fitEnd"
@@ -152,7 +154,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
-            android:text="¿No tienes cuenta? registrate aqui"
+            android:text="¿No tienes cuenta? Regístrate aquí"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary" />
 

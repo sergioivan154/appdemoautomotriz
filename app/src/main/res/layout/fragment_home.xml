@@ -12,7 +12,7 @@
         android:id="@+id/rwHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight=".7"
         android:background="@color/colorPrimary"
         android:scrollbarStyle="outsideInset"
         android:scrollbars="horizontal" />
@@ -20,7 +20,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:orientation="horizontal"
         android:padding="10dp">
 
@@ -30,17 +30,8 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:background="@drawable/card_background"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animation_view"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"
-                app:lottie_autoPlay="true"
-                app:lottie_fileName="smiley_stack.json"
-                app:lottie_loop="true" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -48,11 +39,25 @@
                 android:layout_height="wrap_content"
                 android:text="Puntos" />
 
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="1"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="smiley_stack.json"
+                app:lottie_loop="true" />
+
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1000" />
+                android:layout_weight="2"
+                android:text="1000"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -61,22 +66,33 @@
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
             android:background="@drawable/card_background"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingLeft="20dp">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="Servicio" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="Próximo servicio de kilometraje"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="050173"
+                android:textAlignment="center"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
@@ -94,21 +110,24 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:background="@drawable/card_background"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="Seguro" />
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="Qualitas No Poliza \n 345672 "
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -129,7 +148,8 @@
             <ImageView
                 android:id="@+id/imgTips"
                 android:layout_width="wrap_content"
-                android:layout_height="100dp" />
+                android:layout_height="70dp"
+                android:padding="10dp" />
         </LinearLayout>
     </LinearLayout>
 
