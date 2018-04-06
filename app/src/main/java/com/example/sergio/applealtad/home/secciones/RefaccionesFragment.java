@@ -50,9 +50,17 @@ public class RefaccionesFragment extends BaseFragment {
         imgRefacciones.add(R.drawable.refacciones04);
         imgRefacciones.add(R.drawable.refacciones05);
         imgRefacciones.add(R.drawable.refacciones06);
+        List<String> txtPromociones = new ArrayList<>();
+
+        txtPromociones.add("Balatas");
+        txtPromociones.add("Rines");
+        txtPromociones.add("Aleron");
+        txtPromociones.add("Faros");
+        txtPromociones.add("Playera");
+        txtPromociones.add("Gorra");
 
 
-        AdapterRefac adapterRefac = new AdapterRefac(getContext(),imgRefacciones);
+        AdapterRefac adapterRefac = new AdapterRefac(getContext(),imgRefacciones,txtPromociones);
         RecyclerView rwRefac = (RecyclerView)findViewById(R.id.rwRefact);
         rwRefac.setLayoutManager(new LinearLayoutManager(getActivity()));
         rwRefac.setAdapter(adapterRefac);

@@ -13,12 +13,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.sergio.applealtad.R;
 import com.example.sergio.applealtad.bases.BaseFragment;
 import com.example.sergio.applealtad.home.secciones.adapters.AdapterHome;
 import com.example.sergio.applealtad.home.secciones.adapters.AdapterPromociones;
 import com.example.sergio.applealtad.register.RegisterFragment;
+import com.example.sergio.applealtad.storage.DemoPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,7 +90,10 @@ public class HomeFragment extends BaseFragment {
             }
         });
 
+        int [] kilometraje = DemoPreference.getInstance(getContext()).getKilometraje();
+        TextView txtKilometraje = (TextView)findViewById(R.id.txtKilometraje);
 
+        txtKilometraje.setText(""+kilometraje[0]+""+kilometraje[1]+""+kilometraje[2]+""+kilometraje[3]+""+kilometraje[4]+""+kilometraje[5]);
     }
 
 }

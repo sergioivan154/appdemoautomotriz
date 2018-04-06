@@ -50,6 +50,8 @@ public class PromocionesFragment extends BaseFragment {
         imgPromociones.add(R.drawable.promocion5);
         imgPromociones.add(R.drawable.promocion6);
 
+
+
         AdapterPromociones adapterPromociones = new AdapterPromociones(getContext(),imgPromociones);
 
         RecyclerView rwPromos = (RecyclerView)findViewById(R.id.rwManual);

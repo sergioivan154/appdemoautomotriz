@@ -36,7 +36,7 @@ public class AdapterPromociones extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     private class ViewHolderItemMenu extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView txtAportacion, txtPatron, txtFecha,txtSueldo;
+
         public ImageView imagenPrincipal;
         public ImageView imagenSecundaria;
 
@@ -45,6 +45,7 @@ public class AdapterPromociones extends RecyclerView.Adapter<RecyclerView.ViewHo
             super(itemView);
             imagenPrincipal = itemView.findViewById(R.id.imagePrincipal);
             imagenSecundaria = itemView.findViewById(R.id.imageSecundaria);
+
 
         }
 

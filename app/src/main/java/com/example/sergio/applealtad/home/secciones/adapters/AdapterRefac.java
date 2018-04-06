@@ -20,10 +20,11 @@ public class AdapterRefac extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     private Context context;
     private List<Integer> lImagenesRefacciones;
-    public AdapterRefac(Context context,List<Integer> lImagenesRefacciones){
+    List<String> lTxtPromociones;
+    public AdapterRefac(Context context,List<Integer> lImagenesRefacciones,List<String> lTxtPromociones){
         this.context=context;
         this.lImagenesRefacciones =lImagenesRefacciones;
-
+        this.lTxtPromociones = lTxtPromociones;
     }
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -49,14 +50,15 @@ public class AdapterRefac extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     private class ViewHolderItemMenu extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         ImageView imgPrincipal, imgSecundaria;
-
+        TextView txtRecf, txtRecfacSec;
 
         private ViewHolderItemMenu(View itemView){
             super(itemView);
 
             imgPrincipal = itemView.findViewById(R.id.imagenPrincipal);
             imgSecundaria = itemView.findViewById(R.id.imagenSecundaria);
-
+            txtRecf = itemView.findViewById(R.id.txtRecfac);
+            txtRecfacSec = itemView.findViewById(R.id.txtRecfacSec);
 
         }
 
@@ -68,8 +70,11 @@ public class AdapterRefac extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     private void configureViewHolderItemMenu(final AdapterRefac.ViewHolderItemMenu holder, final int position) {
 
         holder.imgPrincipal.setImageResource(lImagenesRefacciones.get(position));
-        if(position + 1 < lImagenesRefacciones.size())
+        holder.txtRecf.setText(lTxtPromociones.get(position));
+        if(position + 1 < lImagenesRefacciones.size()){
             holder.imgSecundaria.setImageResource(lImagenesRefacciones.get(position + 1));
+            holder.txtRecfacSec.setText(lTxtPromociones.get(position + 1));
+        }
     }
     @Override
     public int getItemCount() {
