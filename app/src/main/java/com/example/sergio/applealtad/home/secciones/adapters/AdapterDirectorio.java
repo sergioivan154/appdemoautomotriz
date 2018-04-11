@@ -1,7 +1,13 @@
 package com.example.sergio.applealtad.home.secciones.adapters;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,15 +18,17 @@ import com.example.sergio.applealtad.R;
 
 import java.util.List;
 
+import static butterknife.internal.Utils.arrayOf;
+
 /**
  * Created by sergio on 05/03/18.
  */
 
 public class AdapterDirectorio extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private Context context;
+    private Activity context;
     private  int num;
     List<DirectorioPojo> lDirectorio;
-    public AdapterDirectorio(Context context, List<DirectorioPojo> lDirectorio){
+    public AdapterDirectorio(Activity context, List<DirectorioPojo> lDirectorio){
         this.lDirectorio = lDirectorio;
         this.context=context;
         this.num = num;
@@ -38,6 +46,7 @@ public class AdapterDirectorio extends RecyclerView.Adapter<RecyclerView.ViewHol
     private class ViewHolderItemMenu extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView txtNombre, txtTelefono;
+        Activity activity;
 
 
         private ViewHolderItemMenu(View itemView){
@@ -47,6 +56,20 @@ public class AdapterDirectorio extends RecyclerView.Adapter<RecyclerView.ViewHol
             txtTelefono = itemView.findViewById(R.id.txtTelefono);
 
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    Log.d("boton","Entra el fun Call");
+
+                    callIntent.setData( Uri.parse("tel:"+txtTelefono));
+                    if (ActivityCompat.checkSelfPermission(context, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(context, arrayOf(android.Manifest.permission.CALL_PHONE), 105);
+                    } else {
+                        context.startActivity(callIntent);
+                    }
+                }
+            });
 
 
         }

@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <Spinner
+                android:id="@+id/spinnerDistribuidor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
@@ -40,6 +41,7 @@
                 android:text="Dirección: Av. Emiliano Zapata 600, Tlaltenango, 62160 Cuernavaca, Mor."/>
 
             <TextView
+                android:id="@+id/textoTelefono"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"

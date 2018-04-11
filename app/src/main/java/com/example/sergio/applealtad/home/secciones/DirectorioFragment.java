@@ -29,6 +29,10 @@ import com.example.sergio.applealtad.home.secciones.adapters.AdapterSeminuevo;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.widget.AdapterView;
+import android.widget.Spinner;
+import android.widget.TextView;
+
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -53,7 +57,8 @@ public class DirectorioFragment extends BaseFragment  implements OnMapReadyCallb
     private LocationManager locationManager;
     private static final float MIN_DISTANCE = 1000;
     private LatLng latLng;
-
+    private Spinner spDistribuidor;
+    private TextView textoTelefono;
     public static DirectorioFragment getInstance(){
         DirectorioFragment fragment=new DirectorioFragment();
         return fragment;
@@ -67,6 +72,21 @@ public class DirectorioFragment extends BaseFragment  implements OnMapReadyCallb
 
         View view = inflater.inflate(R.layout.fragment_directorio, container, false);
 
+        spDistribuidor = view.findViewById(R.id.spinnerDistribuidor);
+        textoTelefono =  view.findViewById(R.id.textoTelefono);
+        final List<String> ltelefonosDistrbuidores = new ArrayList<>();
+        ltelefonosDistrbuidores.add("01 (777) 101 0530");
+        ltelefonosDistrbuidores.add("01 (777) 101 0531");
+        ltelefonosDistrbuidores.add("01 (777) 101 0532");
+        ltelefonosDistrbuidores.add("01 (777) 101 0533");
+        ltelefonosDistrbuidores.add("01 (777) 101 0534");
+        ltelefonosDistrbuidores.add("01 (777) 101 0535");
+        spDistribuidor.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                textoTelefono.setText(ltelefonosDistrbuidores.get(position));
+            }
+        });
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
@@ -106,7 +126,7 @@ public class DirectorioFragment extends BaseFragment  implements OnMapReadyCallb
         lDirectorio.add(new DirectorioPojo("Policia", "911"));
         lDirectorio.add(new DirectorioPojo("Bomberos", "911"));
 
-        AdapterDirectorio adapterDirectorio = new AdapterDirectorio(getContext(),lDirectorio);
+        AdapterDirectorio adapterDirectorio = new AdapterDirectorio(getActivity(),lDirectorio);
 
         RecyclerView rwDirectorio = (RecyclerView)findViewById(R.id.rvDirectorio);
         rwDirectorio.setLayoutManager(new LinearLayoutManager(getActivity()));
