@@ -25,18 +25,25 @@
             <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
                 android:entries="@array/Distribuidores">
             </Spinner>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes"/>
+                android:paddingBottom="10dp"
+                android:text="Distribuidor 1: Cresta Cuernavaca (al desplegar que aparezca Cresta Morelos y Cresta Cuautla)"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="Dirección: Av. Emiliano Zapata 600, Tlaltenango, 62160 Cuernavaca, Mor."/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="5555-5555"
+                android:text="Teléfono: 01 (777) 101 0530"
                 android:textStyle="bold"/>
 
         </LinearLayout>

@@ -101,15 +101,10 @@ public class DirectorioFragment extends BaseFragment  implements OnMapReadyCallb
         super.onActivityCreated(savedInstanceState);
 
         List<DirectorioPojo> lDirectorio = new ArrayList<>();
-        lDirectorio.add(new DirectorioPojo("Autos Nuevos", "5555-5555"));
-        lDirectorio.add(new DirectorioPojo("Autos Seminuevos", "5555-5555"));
-        lDirectorio.add(new DirectorioPojo("Servicio", "5555-5555"));
-        lDirectorio.add(new DirectorioPojo("Refacciones y Accesorios", "5555-5555"));
-        lDirectorio.add(new DirectorioPojo("Hojalatería Pintura", "5555-5555"));
-        lDirectorio.add(new DirectorioPojo("Aseguradora", "5555-5555"));
-        lDirectorio.add(new DirectorioPojo("Financiera", "5555-5555"));
-        lDirectorio.add(new DirectorioPojo("Policia", "5555-5555"));
-        lDirectorio.add(new DirectorioPojo("Bomberos", "5555-5555"));
+        lDirectorio.add(new DirectorioPojo("Aseguradora", "01 (55) 47495114"));
+        lDirectorio.add(new DirectorioPojo("Financiera", " 01 800 2020 680"));
+        lDirectorio.add(new DirectorioPojo("Policia", "911"));
+        lDirectorio.add(new DirectorioPojo("Bomberos", "911"));
 
         AdapterDirectorio adapterDirectorio = new AdapterDirectorio(getContext(),lDirectorio);
 
