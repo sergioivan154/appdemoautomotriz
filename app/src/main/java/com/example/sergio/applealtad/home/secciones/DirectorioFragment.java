@@ -81,12 +81,12 @@ public class DirectorioFragment extends BaseFragment  implements OnMapReadyCallb
         ltelefonosDistrbuidores.add("01 (777) 101 0533");
         ltelefonosDistrbuidores.add("01 (777) 101 0534");
         ltelefonosDistrbuidores.add("01 (777) 101 0535");
-        spDistribuidor.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       /* spDistribuidor.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 textoTelefono.setText(ltelefonosDistrbuidores.get(position));
             }
-        });
+        });*/
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
