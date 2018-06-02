@@ -50,6 +50,12 @@ public class HomeFragment extends BaseFragment {
         List<Integer> lImgPromociones = new ArrayList<>();
 
         lImgPromociones.add(R.drawable.promocion1);
+        lImgPromociones.add(R.drawable.promocion2);
+        lImgPromociones.add(R.drawable.promocion3);
+        lImgPromociones.add(R.drawable.promocion4);
+        lImgPromociones.add(R.drawable.promocion5);
+        lImgPromociones.add(R.drawable.promocion6);
+
 
 
 
